@@ -1,0 +1,198 @@
+@font-face {
+  font-family: Happy-Times;
+  src: url("/assets/webfonts/happy-times-NG_regular_master_web.woff") format("woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Happy-Times-Italic;
+  src: url("/assets/webfonts/happy-times-NG_italic_master_web.woff") format("woff");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Amiamie;
+  src: url("/assets/webfonts/Amiamie-Regular.woff") format("woff");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: #1e65ff;
+  color: white;
+
+}
+
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  font-family: Amiamie;
+  font-size: 1vw;
+  letter-spacing: 0.03vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0px 0px 0px 15px;
+}
+
+
+.img-big {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.column {
+flex-basis: 12.666667%;
+padding: 10px;
+box-sizing: border-box;
+}
+
+.title {
+order: 1;
+flex-basis: 16.666667%;
+}
+
+
+.column {
+  flex-basis: 16.666667%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+  
+.title {
+  order: 1;
+  flex-basis: 16.666667%;
+}
+  
+.caption {
+  order: 2;
+  flex-basis: 55.666667%;
+}
+
+  
+.flex-container {
+display: flex;
+flex-wrap: wrap;
+font-size: 55px;
+text-align: left;
+}
+
+.flex-item-left {
+font-family: Happy-Times;
+font-size: 2.7vw;
+letter-spacing: -0.04vw;
+line-height: 122%;
+padding: 18px;
+flex: 66%;
+}
+
+.flex-item-right {
+padding: 10px;
+flex: 34%;
+}
+
+#second-div {
+font-family: Amiamie;
+font-size: 1.5vw;
+color: rgb(30,100,255);
+}
+
+.cambio-font {
+font-family: Happy-Times;
+}
+
+a {
+color: black;
+cursor: pointer;
+text-decoration: none;
+}
+
+a:hover {
+color: rgb(30,100,255);
+text-decoration: underline 2px solid rgb(30,100,255);
+}
+
+.about-link {
+  text-decoration: underline 3px solid black;
+  text-underline-offset: 4px;
+
+}
+
+.about-link:hover {
+  text-decoration: underline 3px solid rgb(30,100,255);
+  font-family: Happy-Times-Italic;
+}
+
+footer {
+background-color: #ffffff;
+flex-basis: 16.666667%;
+position: fixed;
+bottom: 50px;
+height: 50px;
+display: flex;
+justify-content: flex-start;
+margin: 15px 0 0 15px;
+}
+
+p {
+background-color: white;
+}
+
+.footer-content {
+background-color: #ffffff;
+margin-left: 5px;
+font-family: Amiamie;
+font-size: 1vw;
+text-align: left;
+}
+
+.img {
+  max-width: 200px;
+}
+
+.slide img {
+  max-width: fit-content;
+  max-height: fit-content;
+  }
+  
+.showreel {
+  width: 100%;
+  max-height: 80%;
+  position: fixed;
+  top: 60px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+}
+ 
+@media screen and (max-width: 416px) {
+
+body.index {
+  display: flex;
+  flex-direction: column;
+  background-image: none;
+}
+ 
+.flex-item-left {
+  flex: 100%;
+  font-size: 8vw;;
+}
+
+.flex-item-right {
+  flex:0%;
+  padding:0px;
+}
+
+}
