@@ -188,7 +188,7 @@ text-align: left;
   .showreel {
     width: 100%;
     position:fixed;
-    top: 325px;
+    top: 240px;
     bottom: 0;
     align-items: center;
     justify-content: center;
@@ -214,11 +214,7 @@ text-align: left;
     
 
   .footer-content {
-    background-color: #ffffff;
-    margin-left: 5px;
-    font-family: Amiamie;
-    font-size: 2vw;
-    text-align: left;
+    display:none;
   }
 
 }
