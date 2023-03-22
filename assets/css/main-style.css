@@ -89,7 +89,7 @@ text-align: left;
 font-family: Happy-Times;
 font-size: 2.7vw;
 letter-spacing: -0.04vw;
-line-height: 122%;
+line-height: 116%;
 padding: 18px;
 flex: 66%;
 }
@@ -154,45 +154,71 @@ font-size: 1vw;
 text-align: left;
 }
 
-.img {
-  max-width: 200px;
-}
-
-.slide img {
-  max-width: fit-content;
-  max-height: fit-content;
-  }
   
 .showreel {
   width: 100%;
   max-height: 80%;
   position: fixed;
   top: 60px;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  margin-left:0px;
   display: grid;
-  align-items: center;
   justify-content: center;
-  z-index: 0;
 }
  
-@media screen and (max-width: 416px) {
 
-body.index {
-  display: flex;
-  flex-direction: column;
-  background-image: none;
-}
- 
-.flex-item-left {
-  flex: 100%;
-  font-size: 8vw;;
-}
+/* responsive */
+@media screen and (max-width: 992px) {
 
-.flex-item-right {
-  flex:0%;
-  padding:0px;
-}
+  header {
+    font-size: 4vw;
+    text-align:center;
+    flex-direction: column;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    background-image: none;
+  }
+
+  .img-big {
+    display: none;
+  }
+
+  .showreel {
+    width: 100%;
+    position:fixed;
+    top: 325px;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    display: inline-grid;
+  }
+   
+  .flex-item-left {
+    flex-basis: 100%;
+    font-size: 7vw;
+    letter-spacing: -0.1vw;
+  }
+  
+  .flex-item-right {
+    flex:0%;
+    padding:0px;
+  }
+
+  #second-div {
+    font-family: Amiamie;
+    font-size: 3.2vw;
+    color: rgb(30,100,255);
+  }
+    
+
+  .footer-content {
+    background-color: #ffffff;
+    margin-left: 5px;
+    font-family: Amiamie;
+    font-size: 2vw;
+    text-align: left;
+  }
 
 }
