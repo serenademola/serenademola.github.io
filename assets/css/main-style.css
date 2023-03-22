@@ -132,7 +132,6 @@ text-decoration: underline 2px solid rgb(30,100,255);
 }
 
 footer {
-background-color: #ffffff;
 flex-basis: 16.666667%;
 position: fixed;
 bottom: 50px;
@@ -147,11 +146,12 @@ background-color: white;
 }
 
 .footer-content {
-background-color: #ffffff;
+position: fixed;
+bottom: 50px;
+height: 70px;
 margin-left: 5px;
 font-family: Amiamie;
 font-size: 1vw;
-text-align: left;
 }
 
   
@@ -175,6 +175,12 @@ text-align: left;
     flex-direction: column;
   }
 
+  .caption {
+    order: 2;
+    font-size: 3vw;
+    text-align:center;
+  }
+  
   body {
     display: flex;
     flex-direction: column;
@@ -188,7 +194,7 @@ text-align: left;
   .showreel {
     width: 100%;
     position:fixed;
-    top: 240px;
+    top: 325px;
     bottom: 0;
     align-items: center;
     justify-content: center;
@@ -209,12 +215,12 @@ text-align: left;
   #second-div {
     font-family: Amiamie;
     font-size: 3.2vw;
+    line-height: 118%;
     color: rgb(30,100,255);
   }
     
-
   .footer-content {
-    display:none;
+  display: none;
   }
 
 }
