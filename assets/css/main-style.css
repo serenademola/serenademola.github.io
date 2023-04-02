@@ -4,16 +4,16 @@
   font-weight: normal;
 }
 
-@font-face {
-  font-family: Happy-Times-Italic;
-  src: url("/assets/webfonts/happy-times-NG_italic_master_web.woff") format("woff");
-  font-style: italic;
-}
 
 @font-face {
-  font-family: Amiamie;
+  font-family: Amiamie-Reg;
   src: url("/assets/webfonts/Amiamie-Regular.woff") format("woff");
 }
+
+html, body {
+  scroll-behavior: smooth;
+}
+
 
 * {
   box-sizing: border-box;
@@ -25,202 +25,223 @@
 
 }
 
+header {
+  font-family: Amiamie-Reg;
+  font-size: 1.5vw;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0px 0px 0px 10px;
+  align-items: baseline;
+}
 
 body {
+  margin: 0;
+  padding: 0;
+  font-family: Amiamie-Reg;
   display: flex;
   flex-direction: column;
 }
 
-header {
-  font-family: Amiamie;
-  font-size: 1vw;
-  letter-spacing: 0.03vw;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 0px 0px 0px 15px;
-}
-
-
-.img-big {
-  position: absolute;
+.gradient-overlay {
+  position: fixed;
   top: 0;
-  right: 0;
-  z-index: -1;
+  left: 0;
+  width: 100%;
+  height: 65px;
+  background: linear-gradient(to bottom, #1e65ff, transparent);
+  pointer-events: none;
+  z-index: 999;
 }
 
+/*colonne*/
 .column {
-flex-basis: 12.666667%;
-padding: 10px;
+flex-basis: 16.666667%;
+padding-left: 10px;
 box-sizing: border-box;
 }
 
 .title {
 order: 1;
-flex-basis: 16.666667%;
+flex-basis: 60%;
 }
 
-
-.column {
-  flex-basis: 16.666667%;
-  padding: 10px;
-  box-sizing: border-box;
-}
-  
-.title {
-  order: 1;
-  flex-basis: 16.666667%;
-}
-  
-.caption {
+.about {
   order: 2;
-  flex-basis: 55.666667%;
+  flex-basis: 55%;
 }
 
-  
-.flex-container {
-display: flex;
-flex-wrap: wrap;
-font-size: 55px;
-text-align: left;
-}
-
-.flex-item-left {
-font-family: Happy-Times;
-font-size: 2.7vw;
-letter-spacing: -0.04vw;
-line-height: 116%;
-padding: 18px;
-flex: 66%;
-}
-
-.flex-item-right {
-padding: 10px;
-flex: 34%;
-}
-
-#second-div {
-font-family: Amiamie;
-font-size: 1.5vw;
-color: rgb(30,100,255);
-}
-
-.cambio-font {
-font-family: Happy-Times;
-}
-
+/* Links */
 a {
+text-align: left;
+text-decoration: none;
 color: black;
 cursor: pointer;
-text-decoration: none;
 }
 
 a:hover {
 color: rgb(30,100,255);
-text-decoration: underline 2px solid rgb(30,100,255);
 }
 
-.about-link {
-  text-decoration: underline 3px solid black;
-  text-underline-offset: 4px;
-
-}
-
-.about-link:hover {
-  text-decoration: underline 3px solid rgb(30,100,255);
-  font-family: Happy-Times-Italic;
-}
-
-footer {
-flex-basis: 16.666667%;
-position: fixed;
-bottom: 50px;
-height: 50px;
-display: flex;
-justify-content: flex-start;
-margin: 15px 0 0 15px;
-}
-
-p {
-background-color: white;
-}
-
-.footer-content {
-position: fixed;
-bottom: 50px;
-height: 70px;
-margin-left: 5px;
-font-family: Amiamie;
-font-size: 1vw;
-}
-
-  
-.showreel {
-  width: 100%;
-  max-height: 80%;
-  position: fixed;
-  top: 60px;
-  margin-left:0px;
-  display: grid;
-  justify-content: center;
-}
- 
-
-/* responsive */
-@media screen and (max-width: 992px) {
-
-  header {
-    font-size: 4vw;
-    text-align:center;
-    flex-direction: column;
-  }
-
-  .caption {
-    order: 2;
-    font-size: 3vw;
-    text-align:center;
+.info-link {
+  text-align: left;
+  text-decoration: none;
+  color: rgb(30,100,255);
+  cursor: pointer;
   }
   
-  body {
-    display: flex;
-    flex-direction: column;
-    background-image: none;
-  }
-
-  .img-big {
-    display: none;
-  }
-
-  .showreel {
-    width: 100%;
-    position:fixed;
-    top: 240px;
-    bottom: 0;
-    align-items: center;
-    justify-content: center;
-    display: inline-grid;
-  }
-   
-  .flex-item-left {
-    flex-basis: 100%;
-    font-size: 7vw;
-    letter-spacing: -0.1vw;
-  }
+.info-link:hover {
+  color: rgb(30,100,255);
+  text-decoration: underline;
+}
   
-  .flex-item-right {
-    flex:0%;
-    padding:0px;
-  }
 
-  #second-div {
-    font-family: Amiamie;
-    font-size: 3.2vw;
-    line-height: 118%;
-    color: rgb(30,100,255);
-  }
-    
-  .footer-content {
+/* Back to top */
+#myBtn {
+  font-family: Amiamie-Reg;
   display: none;
-  }
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  font-size: 1.4vw;
+  border: none;
+  outline: none;
+  color: black;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 15px;
+  z-index: 2;
+}
+
+#myBtn:hover {
+  color: rgb(30,100,255);
+}
+
+
+/*sezioni */
+.header-section {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0px 0px 0px 10px;
+  align-items: baseline;
+  font-size: 1.4vw;
+}
+
+.title-proj-section {
+  min-width:fit-content;
+  font-size: 2vw;
+  display: inline;
+  padding: 5px;
+}
+
+.text_container-section {
+  display: flex;
+  align-items: baseline;
+}
+
+.hidden-text-section {
+  color: rgb(30,100,255);
+  display: none;
+  padding-right:25px;
+  padding-left: 5px;
+  line-height: 112%;
+}
+
+.extra-section {
+  display:flex;
+  align-items: baseline;
+}
+
+.extra-section:hover {
+  cursor: pointer;
+  color: #1e65ff;
+}
+
+
+/* Lista */
+
+.list-container{
+  height: 100vh;
+}
+
+ul {
+  padding: 0px 0px 0px 10px;
+  list-style-type: none;
+}
+
+li p {
+display: inline;
+font-family: Amiamie-Reg;
+font-size: 2.8vw;
+padding: 5px;
+text-align: left;
+line-height: 135%;
+}
+
+.title-prg {
+font-family: Amiamie-Reg;
+font-size: 2.8vw;
+padding: 5px;
+text-align: left;
+width: 55%;
+}
+
+.tag-prg, .year-prg {
+  font-size: 1.4vw;
+}
+
+
+/* jQquery per header */
+
+.text_container {
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+.text_container .extra:hover {
+  color: rgb(30, 100, 255);
+  cursor: pointer;
+}
+
+.hidden-text {
+  color: rgb(30, 100, 255);
+  text-decoration: none;
+  border-bottom: none;
+  font-size: 1.4vw;
+  line-height: 125%;
+  letter-spacing: -0.03vw;
+  display: none;
+}
+
+.hidden-text p {
+  margin: 0;
+}
+
+.hidden-text-small {
+  color: rgb(30, 100, 255);
+  font-family: Amiamie-Reg;
+  text-decoration: none;
+  border-bottom: none;
+  font-size: 0.9vw;
+  line-height: 1.5;
+  display: block;
+}
+
+/* img */
+.image-container {
+  display: grid;
+  justify-items: center;
+  position: relative;
+  z-index: 1;  
+  /*
+  display: flex; 
+  flex-wrap: wrap; 
+  */
+}
+
+.image-container img {
+  width: 100%;
+  box-sizing: border-box; /* includes the padding in the width calculation */
+  border: #1e65ff;
 
 }
