@@ -1,14 +1,7 @@
 @font-face {
-    font-family: Happy-Times;
-    src: url("/assets/webfonts/happy-times-NG_regular_master_web.woff") format("woff");
-    font-weight: normal;
-  }
-  
-  
-  @font-face {
     font-family: Amiamie-Reg;
     src: url("/assets/webfonts/Amiamie-Regular.woff") format("woff");
-  }
+}
 
   
   * {
@@ -17,6 +10,9 @@
   
 
   body {
+    background-image: url("/images/bg_4.png");
+    background-repeat: no-repeat;
+    overflow-x: hidden;
     font-family: Amiamie-Reg;
     font-size: 1.1vw;
     line-height: 120%
@@ -45,12 +41,11 @@
 span {
     color:grey;
     font-size: 0.8vw;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
 }
 
 p {
   margin: 0;
-  padding-top: 5px;
   font-family: Amiamie-Reg;
   font-size: 1.1vw;
 }
@@ -65,8 +60,8 @@ p {
   
   .div-1 {
     flex: 0 0 40%;
-    padding-bottom: 30px;
-    max-width:52ch;
+    padding-bottom: 10px;
+    max-width:53ch;
   }
   
   .row-2 {
@@ -83,15 +78,35 @@ p {
     flex: 1 0 60%;
   }
 
-
   /* Links */
   a {
   text-align: left;
   text-decoration: none;
   color: black;
-  cursor: pointer;
+  cursor: none;
   }
   
   a:hover {
   color: grey;
+  cursor: none;
+  }
+
+
+  /* mobile */
+  @media only screen and (max-width: 480px) {
+    body {
+      background-image: url("/images/bg_4.png");
+      background-repeat: no-repeat;
+      font-family: Amiamie-Reg;
+      font-size: 2.5vw;
+    }
+
+    span {
+      font-size: 2.5vw;
+  }
+  
+  p {
+    font-family: Amiamie-Reg;
+    font-size: 2.5vw;
+  }
   }
