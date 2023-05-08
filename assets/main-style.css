@@ -4,9 +4,6 @@
 }
 
   
-  * {
-    cursor: none;
-  }
   
 
   body {
@@ -23,20 +20,6 @@
     color: white;
   }
 
-  .circle-cursor {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: grey;
-    opacity: 0.8;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    z-index: 99999;
-    cursor: none;
-  }
   
 span {
     color:grey;
@@ -83,12 +66,10 @@ p {
   text-align: left;
   text-decoration: none;
   color: black;
-  cursor: none;
   }
   
   a:hover {
   color: grey;
-  cursor: none;
   }
 
 
@@ -97,16 +78,20 @@ p {
     body {
       background-image: url("/images/bg_4.png");
       background-repeat: no-repeat;
+      background-position: top;
       font-family: Amiamie-Reg;
-      font-size: 2.5vw;
+      font-size: 3vw;
     }
-
+    
     span {
-      font-size: 2.5vw;
+      font-size: 3vw;
+    }
+    
+    p {
+      font-family: Amiamie-Reg;
+      font-size: 3vw;
+      max-width: 44ch;
+    }
+    
   }
   
-  p {
-    font-family: Amiamie-Reg;
-    font-size: 2.5vw;
-  }
-  }
