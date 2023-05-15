@@ -18,11 +18,14 @@ body {
   color:grey;
   font-family: Amiamie-Reg;
   font-weight: regular;
+  font-size: larger;
   padding-bottom: 5px;
 }
 
-.p {
+.text {
   padding-bottom: 15px;
+  font-size: 1.3em;
+  max-width: 48ch;
 }
 
 /* Links */
@@ -42,21 +45,21 @@ a:hover {
 }
 
 .left-column {
-  flex-basis: 30%;
+  flex-basis: 50%;
   padding: 20px 10px 0px 20px;
 }
 
 .right-column {
-  flex-basis: 70%;
+  flex-basis: 50%;
   flex-grow: 1;
-  padding: 20px 20px 0px 10px;
+  padding: 20px 20px 10px 10px;
 }
 
 /* Showreel */
 .showreel {
   width: 100%;
-  height: 0;
-  padding-bottom: 60%; /* ratio delle immagini */
+  height: 80%;
+  padding-bottom: 100%; /* ratio delle immagini */
   position: relative;
   overflow: hidden;
 }
@@ -67,7 +70,7 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Per mantenere l'aspect ratio e coprire l'area disponibile */
+  object-fit:cover;
 }
 
 .caption {
@@ -86,5 +89,15 @@ a:hover {
     flex-basis: 100%;
   }
 
+  .showreel {
+    width: 100%;
+    height: 80%;
+    padding-bottom: 100%; /* ratio delle immagini */
+    position: relative;
+  }
 
+  body {
+    font-family: Amiamie-Reg;
+    overflow-y:visible;
+  }
 }
