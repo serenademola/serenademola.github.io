@@ -1,6 +1,12 @@
 @font-face {
-  font-family: SwINTL-Reg;
+  font-family: SuisseIntl-Reg;
   src: url("/assets/webfonts/SUISSEINTL-REGULAR.TTF") format("truetype");
+}
+
+
+@font-face {
+  font-family: SuisseIntl-Light;
+  src: url("/assets/webfonts/SuisseIntl-Light.otf") format("opentype");
 }
 
 * {
@@ -10,10 +16,11 @@
 }
 
 body {
-  font-family: SwINTL-Reg;
+  font-family: SuisseIntl-Reg;
   overflow-y: hidden;
   display: flex;
-  font-size: 1.8em;
+  font-size: 2em;
+  line-height: 124%;
 }
 
 header {
@@ -31,6 +38,7 @@ header {
 
 .header-link {
   color:black;
+  font-family: SuisseIntl-Light;
 }
 
 .header-link:hover {
@@ -46,7 +54,7 @@ header {
 a {
   text-align: left;
   text-decoration: none;
-  color: black;
+  color:black;
 }
     
 a:hover {
@@ -71,25 +79,22 @@ a:hover {
   padding-top: 3px;
   color:black;
   text-align: left;
-  max-width: 45ch;
+  max-width: 48ch;
 }
 
 /* Media query per il layout mobile */
 @media (max-width: 768px) {
   body {
-    font-family: SwINTL-Reg;
-    overflow-y: hidden;
     display: flex;
     font-size: 1em;
   }
 
   .header-link {
-  display:none;
+    font-size: 1em;
   }
 
   .hidden-text {
-    display:none;
-
+    font-size: 1em;
   }
 
 }

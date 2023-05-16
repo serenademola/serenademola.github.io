@@ -1,18 +1,18 @@
 document.addEventListener("DOMContentLoaded", function() {
   // Showreel
   var images = [
-    {src: "/images/Pagine queer/pagine-queer_1.jpg", alt: "", caption: "Pagine queer. Le riviste indipendenti come luogo d'intersezione* Editorial and Research* MA Thesis* 2023"},
-    {src: "/images/Pagine queer/pagine-queer_2.jpg", alt: "", caption: "Pagine queer. Le riviste indipendenti come luogo d'intersezione* Editorial and Research* MA Thesis* 2023"},
-    {src: "/images/Pagine queer/pagine-queer_3.jpg", alt: "", caption: "Pagine queer. Le riviste indipendenti come luogo d'intersezione* Editorial and Research* MA Thesis* 2023"},
-    {src: "/images/Pagine queer/pagine-queer_4.jpg", alt: "", caption: "Pagine queer. Le riviste indipendenti come luogo d'intersezione* Editorial and Research* MA Thesis* 2023"},
-    {src: "/images/Pagine queer/pagine-queer_5.jpg", alt: "", caption: "Pagine queer. Le riviste indipendenti come luogo d'intersezione* Editorial and Research* MA Thesis* 2023"},
+    {src: "/images/Pagine queer/pagine-queer_1.jpg", alt: "", caption: "Pagine queer. Le riviste indipendenti come luogo d'intersezione* Editorial & Research* MA Thesis* 2023"},
+    {src: "/images/Pagine queer/pagine-queer_2.jpg", alt: "", caption: "Pagine queer. Le riviste indipendenti come luogo d'intersezione* Editorial & Research* MA Thesis* 2023"},
+    {src: "/images/Pagine queer/pagine-queer_3.jpg", alt: "", caption: "Pagine queer. Le riviste indipendenti come luogo d'intersezione* Editorial & Research* MA Thesis* 2023"},
+    {src: "/images/Pagine queer/pagine-queer_4.jpg", alt: "", caption: "Pagine queer. Le riviste indipendenti come luogo d'intersezione* Editorial & Research* MA Thesis* 2023"},
+    {src: "/images/Pagine queer/pagine-queer_5.jpg", alt: "", caption: "Pagine queer. Le riviste indipendenti come luogo d'intersezione* Editorial & Research* MA Thesis* 2023"},
 
-    {src: "/images/APC/APC_2-1.jpg", alt: "", caption: "Al Perpetuo Crepuscolo* Seminar and Workshop* 2022"},
-    {src: "/images/APC/APC_3.jpg", alt: "", caption: "Al Perpetuo Crepuscolo* Seminar and Workshop* 2022"},
-    {src: "/images/APC/APC_5.jpg", alt: "", caption: "Al Perpetuo Crepuscolo* Seminar and Workshop* 2022"},
-    {src: "/images/APC/APC_1.jpg", alt: "", caption: "Al Perpetuo Crepuscolo* Seminar and Workshop* 2022"},
-    {src: "/images/Annuario/ANNUARIO_1.jpg", alt: "", caption: "Annuario della Ricerca Iuav 2019-2020* 2022"},
-    {src: "/images/Annuario/ANNUARIO_5.jpg", alt: "", caption: "Annuario della Ricerca Iuav 2019-2020* 2022"},
+    {src: "/images/APC/APC_2-1.jpg", alt: "", caption: "Al Perpetuo Crepuscolo* Seminar, Workshop & Identity* 2022"},
+    {src: "/images/APC/APC_3.jpg", alt: "", caption: "Al Perpetuo Crepuscolo* Seminar, Workshop & Identity* 2022"},
+    {src: "/images/APC/APC_5.jpg", alt: "", caption: "Al Perpetuo Crepuscolo* Seminar, Workshop & Identity* 2022"},
+    {src: "/images/APC/APC_1.jpg", alt: "", caption: "Al Perpetuo Crepuscolo* Seminar, Workshop & Identity* 2022"},
+    {src: "/images/Annuario/ANNUARIO_1.jpg", alt: "", caption: "Annuario della Ricerca Iuav 2019-2020* Editorial & Data* 2022"},
+    {src: "/images/Annuario/ANNUARIO_5.jpg", alt: "", caption: "Annuario della Ricerca Iuav 2019-2020* Editorial & Data* 2022"},
 
 
   ];
