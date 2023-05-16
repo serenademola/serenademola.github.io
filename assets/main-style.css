@@ -13,6 +13,7 @@ body {
   font-family: SwINTL-Reg;
   overflow-y: hidden;
   display: flex;
+  font-size: 1.8em;
 }
 
 header {
@@ -30,7 +31,6 @@ header {
 
 .header-link {
   color:black;
-  font-size: 1.7em;
 }
 
 .header-link:hover {
@@ -38,12 +38,7 @@ header {
 }
 
 .hidden-text {
-  font-size: 1.9em;
   max-width: 43ch;
-}
-  
-.p-title {
-  font-size: 1.9em;
 }
 
 
@@ -66,7 +61,6 @@ a:hover {
   text-align: center;
   position: fixed;
   bottom: 8px;
-  transition: opacity 1s ease-in-out;
 }
 
 .showreel img {
@@ -77,10 +71,25 @@ a:hover {
   padding-top: 3px;
   color:black;
   text-align: left;
-  font-size: 1.9em;
   max-width: 45ch;
 }
 
 /* Media query per il layout mobile */
 @media (max-width: 768px) {
+  body {
+    font-family: SwINTL-Reg;
+    overflow-y: hidden;
+    display: flex;
+    font-size: 1em;
+  }
+
+  .header-link {
+  display:none;
+  }
+
+  .hidden-text {
+    display:none;
+
+  }
+
 }
