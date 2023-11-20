@@ -19,7 +19,7 @@ body {
   font-family: SuisseIntl-Reg;
   overflow-y: hidden;
   display: flex;
-  font-size: 1.8em;
+  font-size: 1.5em;
   line-height: 124%;
 }
 
@@ -46,7 +46,7 @@ header {
 }
 
 .hidden-text {
-  max-width: 43ch;
+  max-width: 42ch;
 }
 
 
@@ -76,6 +76,7 @@ a:hover {
 }
 
 .caption {
+  position: fixed;
   padding-top: 3px;
   color:black;
   text-align: left;
