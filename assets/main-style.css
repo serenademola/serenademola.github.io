@@ -40,7 +40,7 @@ header {
 }
 
 .hidden-text {
-  max-width: 45ch;
+  max-width: 48ch;
 }
 
 /* Links */
@@ -91,6 +91,14 @@ a:hover {
 @media (max-width: 768px) {
   body {
     display: flex;
-    font-size: 1em;
+    font-size: 1.8em;
   }
+  .hidden-text {
+    max-width: 100%;
+  }
+  
+  .caption {
+    max-width: 100%;
+  }
+  
 }
