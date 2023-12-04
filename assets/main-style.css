@@ -37,10 +37,12 @@ header {
 
 .p-title {
   color: gray;
+  font-size: 1.3em;
 }
 
 .hidden-text {
   max-width: 48ch;
+  font-size: 1.3em;
 }
 
 /* Links */
@@ -91,14 +93,12 @@ a:hover {
 @media (max-width: 768px) {
   body {
     display: flex;
-    font-size: 1.4em;
+    font-size: 1.3em;
   }
   .hidden-text {
     max-width: 100%;
-    font-size: 1.4em;
   }
   .caption {
     max-width: 100%;
-    font-size: 1.4em;
   }
 }
