@@ -18,7 +18,7 @@ body {
   font-family: Amiamie-Regular;
   overflow-y: hidden;
   display: flex;
-  font-size: 1.2em;
+  font-size: 1.3em;
   line-height: 124%;
 }
 
@@ -35,31 +35,36 @@ header {
   flex-direction: column;
 }
 
-.header-link {
-  color:black;
-  font-family: Amiamie-Regular;
-}
-
-.header-link:hover {
+.p-title {
   color: gray;
 }
 
 .hidden-text {
-  max-width: 42ch;
+  max-width: 45ch;
 }
-
 
 /* Links */
 a {
   text-align: left;
   text-decoration: none;
-  color:black;
+  color:gray;
 }
     
 a:hover {
   color: grey;
   font-family: Amiamie-Italic;
 }
+
+.header-link {
+  color: gray;
+  font-family: Amiamie-Regular;
+}
+
+.header-link:hover {
+  color: gray;
+  font-family: Amiamie-Italic;
+}
+
 
 /* Showreel */
 .showreel {
