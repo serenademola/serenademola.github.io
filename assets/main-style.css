@@ -42,7 +42,8 @@ header {
 
 .hidden-text {
   max-width: 48ch;
-  font-size: 1.3em;
+  font-size: 1.3em;ù
+  line-height: 128%;
 }
 
 /* Links */
