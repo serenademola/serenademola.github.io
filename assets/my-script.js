@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
     {src: "/images/APC/APC_3.jpg", alt: "Al Perpetuo Crepuscolo* Seminar, Workshop & Identity", caption: "Al Perpetuo Crepuscolo* Seminar, Workshop & Identity* 2022"},
     {src: "/images/APC/APC_5.jpg", alt: "Al Perpetuo Crepuscolo* Seminar, Workshop & Identity", caption: "Al Perpetuo Crepuscolo* Seminar, Workshop & Identity* 2022"},
     {src: "/images/APC/APC_1.jpg", alt: "Al Perpetuo Crepuscolo* Seminar, Workshop & Identity", caption: "Al Perpetuo Crepuscolo* Seminar, Workshop & Identity* 2022"},
+    {src: "/images/APC/APC_7.jpg", alt: "Al Perpetuo Crepuscolo* Seminar, Workshop & Identity", caption: "Al Perpetuo Crepuscolo* Seminar, Workshop & Identity* 2022"},
     {src: "/images/Annuario/ANNUARIO_1.jpg", alt: "Annuario della Ricerca Iuav 2019-2020* Editorial & Data* 2022", caption: "Annuario della Ricerca Iuav 2019-2020* Editorial & Data* 2022"},
     {src: "/images/Annuario/ANNUARIO_5.jpg", alt: "Annuario della Ricerca Iuav 2019-2020* Editorial & Data* 2022", caption: "Annuario della Ricerca Iuav 2019-2020* Editorial & Data* 2022"},
 
