@@ -19,7 +19,7 @@ body {
   overflow-y: hidden;
   display: flex;
   font-size: 1.3em;
-  line-height: 124%;
+  line-height: 142%;
 }
 
 header {
@@ -42,8 +42,7 @@ header {
 
 .hidden-text {
   max-width: 48ch;
-  font-size: 1.3em;ù
-  line-height: 128%;
+  font-size: 1.3em;
 }
 
 /* Links */
