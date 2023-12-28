@@ -91,16 +91,10 @@ a:hover {
 @media (max-width: 768px) {
   body {
     display: flex;
-    font-size: 1;
   }
 
   .caption {
     max-width: 100%;
-    font-size: 1;
-  }
-
-  .p-title {
-    font-size: 1em;
   }
 
   .header-column {
@@ -123,5 +117,4 @@ a:hover {
     position: fixed;
     bottom: 8px;
   }
-
 }
