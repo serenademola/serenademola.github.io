@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-  // Showreel
   var images = [
     {src: "/images/Pagine queer/pagine-queer_1.jpg", alt: "Pagine queer* Editorial & Research* MA Thesis* 2023", caption: "Pagine queer* Editorial & Research* MA Thesis* 2023"},
     {src: "/images/Pagine queer/pagine-queer_2.jpg", alt: "Pagine queer* Editorial & Research* MA Thesis* 2023", caption: "Pagine queer* Editorial & Research* MA Thesis* 2023"},
@@ -9,22 +8,19 @@ document.addEventListener("DOMContentLoaded", function() {
     {src: "/images/Pagine queer/3-template.jpg", alt: "Pagine queer* Editorial & Research* MA Thesis* 2023", caption: "Pagine queer* Editorial & Research* MA Thesis* 2023"},
     {src: "/images/Pagine queer/pagine-queer_5.jpg", alt: "Pagine queer* Editorial & Research* MA Thesis* 2023", caption: "Pagine queer* Editorial & Research* MA Thesis* 2023"},
     {src: "/images/Pagine queer/1-template.jpg", alt: "Pagine queer* Editorial & Research* MA Thesis* 2023", caption: "Pagine queer* Editorial & Research* MA Thesis* 2023"},
-
-
     {src: "/images/APC/APC_2-1.jpg", alt: "Al Perpetuo Crepuscolo* Seminar, Workshop & Identity", caption: "Al Perpetuo Crepuscolo* Seminar, Workshop & Identity* 2022"},
     {src: "/images/APC/APC_3.jpg", alt: "Al Perpetuo Crepuscolo* Seminar, Workshop & Identity", caption: "Al Perpetuo Crepuscolo* Seminar, Workshop & Identity* 2022"},
     {src: "/images/APC/APC_5.jpg", alt: "Al Perpetuo Crepuscolo* Seminar, Workshop & Identity", caption: "Al Perpetuo Crepuscolo* Seminar, Workshop & Identity* 2022"},
     {src: "/images/APC/APC_1.jpg", alt: "Al Perpetuo Crepuscolo* Seminar, Workshop & Identity", caption: "Al Perpetuo Crepuscolo* Seminar, Workshop & Identity* 2022"},
     {src: "/images/APC/APC_7.jpg", alt: "Al Perpetuo Crepuscolo* Seminar, Workshop & Identity", caption: "Al Perpetuo Crepuscolo* Seminar, Workshop & Identity* 2022"},
     {src: "/images/Annuario/ANNUARIO_1.jpg", alt: "Annuario della Ricerca Iuav 2019-2020* Editorial & Data* 2022", caption: "Annuario della Ricerca Iuav 2019-2020* Editorial & Data* 2022"},
-    {src: "/images/Annuario/ANNUARIO_5.jpg", alt: "Annuario della Ricerca Iuav 2019-2020* Editorial & Data* 2022", caption: "Annuario della Ricerca Iuav 2019-2020* Editorial & Data* 2022"},
-
-
+    {src: "/images/Annuario/ANNUARIO_5.jpg", alt: "Annuario della Ricerca Iuav 2019-2020* Editorial & Data* 2022", caption: "Annuario della Ricerca Iuav 2019-2020* Editorial & Data* 2022"}
   ];
 
   var currentImage = Math.floor(Math.random() * images.length);
   var showreelImage = document.getElementById("showreel-image");
   var captionElement = document.querySelector(".caption");
+  var intervalId; // Variable to store the interval ID
 
   function changeImage(back) {
     if (back) {
@@ -37,16 +33,28 @@ document.addEventListener("DOMContentLoaded", function() {
     captionElement.textContent = images[currentImage].caption;
   }
 
+  function startInterval() {
+    intervalId = setInterval(function() {
+      changeImage(false); // Pass 'false' to move to the next image
+    }, 6000); // Set the interval to 6000 milliseconds (6 seconds)
+  }
+
+  function stopInterval() {
+    clearInterval(intervalId);
+  }
+
   showreelImage.src = images[currentImage].src;
   showreelImage.alt = images[currentImage].alt;
   captionElement.textContent = images[currentImage].caption;
 
-  // Associa la funzione changeImage all'evento di click su showreelImage
   showreelImage.addEventListener('click', function() {
-    changeImage(false); // Passa 'false' per avanzare all'immagine successiva
+    stopInterval();
+    changeImage(false);
+    setTimeout(startInterval, 6000);
   });
-  
-  // Show/Hide Hidden Text on Click
+
+  startInterval();
+
   var headerLink = document.querySelector('.header-link');
   var hiddenText = document.querySelector('.hidden-text');
 
