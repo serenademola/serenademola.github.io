@@ -1,11 +1,6 @@
 @font-face {
-  font-family: Amiamie-Regular;
-  src: url("/assets/webfonts/Amiamie-Regular.woff") format("woff");
-}
-
-@font-face {
-  font-family: Amiamie-Italic;
-  src: url("/assets/webfonts/Amiamie-Italic.woff") format("woff");
+  font-family: Inter-Regular;
+  src: url("/assets/webfonts/Inter-Regular.otf") format("opentype");
 }
 
 * {
@@ -15,11 +10,11 @@
 }
 
 body {
-  font-family: Amiamie-Regular;
+  font-family: Inter-Regular; sans-serif;
   overflow-y: hidden;
   display: flex;
-  font-size: 1.3em;
-  line-height: 142%;
+  font-size: 1.1em;
+  line-height: 140%;
 }
 
 header {
@@ -36,13 +31,12 @@ header {
 }
 
 .p-title {
-  color: gray;
-  font-size: 1.3em;
+  font-size: 1.1em;
 }
 
 .hidden-text {
   max-width: 48ch;
-  font-size: 1.3em;
+  font-size: 1.1em;
 }
 
 /* Links */
@@ -54,17 +48,15 @@ a {
     
 a:hover {
   color: grey;
-  font-family: Amiamie-Italic;
 }
 
 .header-link {
   color: gray;
-  font-family: Amiamie-Regular;
+  font-family: Inter-Regular;
 }
 
 .header-link:hover {
   color: gray;
-  font-family: Amiamie-Italic;
 }
 
 
@@ -89,16 +81,40 @@ a:hover {
   max-width: 48ch;
 }
 
+.showreel img {
+  max-width: 100%;
+  cursor: pointer; /* Imposta il cursore come freccia */
+}
+
+
 /* Media query per il layout mobile */
 @media (max-width: 768px) {
   body {
     display: flex;
-    font-size: 1.3em;
+    font-size: 1;
   }
-  .hidden-text {
-    max-width: 100%;
-  }
+
   .caption {
     max-width: 100%;
+    font-size: 1;
   }
+
+  .p-title {
+    font-size: 1em;
+    max-width: 15ch;
+  }
+
+  .header-column {
+    flex-direction: column; /* Imposta la direzione della colonna per il layout mobile */
+    align-items: flex-start; /* Allinea gli elementi all'inizio della colonna */
+  }
+
+  .hidden-text {
+    display: none; /* Nascondi l'hidden text nella visualizzazione mobile */
+  }
+
+  .header-link {
+    display: none; /* Nascondi header-link nella visualizzazione mobile */
+  }
+
 }

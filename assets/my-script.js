@@ -41,8 +41,11 @@ document.addEventListener("DOMContentLoaded", function() {
   showreelImage.alt = images[currentImage].alt;
   captionElement.textContent = images[currentImage].caption;
 
-  setInterval(changeImage, 3000);
-
+  // Associa la funzione changeImage all'evento di click su showreelImage
+  showreelImage.addEventListener('click', function() {
+    changeImage(false); // Passa 'false' per avanzare all'immagine successiva
+  });
+  
   // Show/Hide Hidden Text on Click
   var headerLink = document.querySelector('.header-link');
   var hiddenText = document.querySelector('.hidden-text');
