@@ -101,7 +101,6 @@ a:hover {
 
   .p-title {
     font-size: 1em;
-    max-width: 15ch;
   }
 
   .header-column {
@@ -115,6 +114,14 @@ a:hover {
 
   .header-link {
     display: none; /* Nascondi header-link nella visualizzazione mobile */
+  }
+
+  .showreel {
+    max-width: 100%;
+    padding: 0px 15px 15px 15px;
+    text-align: center;
+    position: fixed;
+    bottom: 8px;
   }
 
 }
