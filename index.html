@@ -5,45 +5,104 @@
                              SERENA DE MOLA 
                          © last update dec/2023
 ------------------------------------------------------------------------
-coded by me, hosted on github
-font in use: Inter by Rasmus Andersson
+                      coded by me, hosted on github
 ------------------------------------------------------------------------
 -->
 
-<html>
 
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Serena De Mola * </title>
-    <meta name="description" content="Graphic designer based in Italy">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/png" href="/images/favicon.png"/>
-    <link rel="stylesheet" href="/assets/main-style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="/assets/my-script.js"></script>
+
+  <meta charset="utf-8">
+  <title>serena de mola* </title>
+  <meta name="description" content="Graphic designer based in Italy">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Link alle immagini da precaricare -->
+  <link rel="preload" href="/images/Pagine queer/pq_1136x757.jpg" as="image">
+  <link rel="preload" href="/images/Pagine queer/3-template.jpg" as="image">
+  <link rel="preload" href="/images/APC/APC_7.jpg" as="image">
+  <link rel="preload" href="/images/APC/APC_6.jpg" as="image">
+  <link rel="preload" href="/images/APC/APC_3.jpg" as="image">
+  <link rel="preload" href="/images/Annuario/ANNUARIO_1.jpg" as="image">
+  <link rel="preload" href="/images/Annuario/ANNUARIO_2.jpg" as="image">
+
+  <link rel="shortcut icon" type="image/png" href="/images/favicon.png"/>
+  <link rel="stylesheet" href="/assets/style.css">
+  <script src="/assets/jquery-mousewheel-main/"></script>
 
 </head>
 
 <body>
-  <header>
-    <div class="header-column">
-      <p class="p-title">Serena De Mola* Graphic Design & co. <a href="#" class="header-link">(...)</a></p>
-      <!--div hidden text-->
-      <div class="hidden-text" style="display: none;">Based between Bari and Venice, she holds a MA in Visual Communication Design at Iuav. Her practice focuses on the relationships between design and its possible sociopolitical variations, with a strong intersectional feminist perspective. Her MA thesis project explores the relationship between independent magazines, graphic design and queer studies.<br>
-        <a href="mailto:serenademola98@gmail.com">Email*</a><a href="https://instagram.com/serena__demola" target="_blank"> Instagram*</a><a href="https://www.linkedin.com/in/serena-de-mola-2b4841221/" target="_blank"> LinkedIn*</a><a href="https://www.behance.net/serenademola" target="_blank"> Behance*</a>
-      </div>
-    </div>
 
+  <header>
+    <div class="title"><a href="/index.html">serena de mola*</a></div>
+    <div class="title-link "><a href="/about.html">about</a></div>
   </header>
   
-  <!--div showreel + caption-->
-  <div class="showreel">
-    <img src="/images/Pagine queer/pagine-queer_1.jpg" alt="" id="showreel-image">
-    <div class="caption"></div>
+
+<!-- Owl Carousel -->
+<div class="owl-carousel">
+
+<!-- PAGINE QUEER -->
+  <div class="frame">
+    <img class="image" src="/images/Pagine queer/pq_1136x757.jpg" alt="Image 1">
+    <div class="text">
+      <p class="combined-text">
+        <span class="title">pagine queer. le riviste indipendenti come luogo d'intersezione. iuav master thesis, 2023. Editorial & Research. </span>
+        <span class="description">396 pages, 170x240mm, paperback binding. 6 case studies (it & eu), 4 interviews, many archives consulted. typeset in happy times by lucas le bihan for velvetyne type foundry, amiamie by mirat masson for byebyebinary typothèque.</span>
+      </p>
+    </div>
   </div>
 
+  <div class="frame">
+    <img class="image" src="/images/Pagine queer/3-template.jpg" alt="Image 1" width="500" height="500">
+  </div>
+
+<!-- APC -->
+  <div class="frame">
+    <img class="image" src="/images/APC/APC_7.jpg" alt="Image 1" width="1000" height="1000">
+    <div class="text">
+      <p class="combined-text">
+        <span class="title">al perpetuo crepuscolo. società dell'informazione tra propaganda e meme. self initiated project with senato degli studenti iuav, 2022-2023. seminar, workshop, visual identity, editorial publication. </span>
+        <span class="description">5 guests, 1 workshop with 40 students. big poster 580×420mm, 1/2 pantone colors on matt coated paper. flyer 148×210mm cmyk on orange paper. publication of 196 pages, 105x210mm, paperback binding, 2/2 pantone colors on fedrigon symbol tatami white paper. typeset in suisse Int'l by ian party for swiss typefaces. with stefania d'eri & alessandro durighello. <a target="_blank" href="https://deprunit.github.io/apc/">more</a></span>
+      </p>
+    </div>
+  </div>
+
+  <div class="frame">
+    <img class="image" src="/images/APC/APC_6.jpg" alt="Image 1" width="500" height="200">
+  </div>
+
+  <div class="frame">
+    <img class="image" src="/images/APC/APC_3.jpg" alt="Image 1" width="500" height="200">
+  </div>
+
+
+<!-- ANNUARIO -->
+<div class="frame">
+  <img class="image" src="/images/Annuario/ANNUARIO_1.jpg" alt="Image 1" width="1000" height="1000">
+  <div class="text">
+    <p class="combined-text">
+      <span class="title">annuario della ricerca iuav 2019—2020. internship at iuav communication office, 2022. editorial & data visualization. </span>
+      <span class="description"> 260 pages, 240×310mm, swiss binding, k+4 pantone on fedrigoni arena natural smooth. typeset in sectra by/for grilli type, ibm plex mono by mike abbink and bold monday. with sara cavallini & alessandro durighello. <a target="_blank" href="https://www.iuav.it/Ricerca1/RISULTATI/annuario-d/AnnuariodellaRicerca_digitale.pdf">more</a></span></span>
+    </p>
+  </div>
+</div>
+
+<div class="frame">
+  <img class="image" src="/images/Annuario/ANNUARIO_2.jpg" alt="Image 1" width="500" height="200">
+</div>
+
+
+<!-- Fine Owl Carousel -->
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
+<script src="/assets/script.js"></script>
 
 </body>
 
 </html>
- 
