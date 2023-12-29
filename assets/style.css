@@ -135,7 +135,7 @@ a:hover {
 /* MEDIA QUERY */
 @media screen and (max-width: 600px) {
   body {
-  font-size: 4vw;
+  font-size: 3vw;
   line-height: 120%;
   font-family: sans-serif; 
   }
@@ -155,8 +155,12 @@ a:hover {
   }
   
   .text {
-    font-size: 4vw;
+    font-size: 3vw;
     line-height: 112%;
+  }
+
+  .title, .title-link {
+    font-size: 3vw;
   }
 
   .container {
@@ -174,7 +178,7 @@ a:hover {
   .bio {
     color: black;
     font-family: sans-serif;
-    font-size: 4vw;
+    font-size: 3vw;
     line-height: 120%;
   }
 
@@ -185,7 +189,7 @@ a:hover {
 
 @media screen and (min-width: 601px) and (max-width: 1024px) {
   body {
-  font-size: 3vw;
+  font-size: 4vw;
   line-height: 120%;
   font-family: sans-serif; 
   }
