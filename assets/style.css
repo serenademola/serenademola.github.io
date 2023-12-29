@@ -23,6 +23,7 @@ header {
 }
 
 .title, .title-link {
+  font-size: 1vw;
   color: black;
   font-family: sans-serif;
 }
@@ -42,12 +43,12 @@ header {
 
 a {
   color: black; 
-  text-decoration: none; /* Rimuove il sottolineato predefinito */
+  text-decoration: none; 
 }
 
 a:hover {
-  color: gray; /* Cambia colore al passaggio del mouse */
-  transition: color 0.3s ease; /* Effetto di transizione del colore */
+  color: gray; 
+  transition: color 0.3s ease; 
 }
 
 .description {
@@ -163,6 +164,7 @@ a:hover {
   }
 
   .combined-text-about {
+    max-width: fit-content;
     text-align: left;
     word-wrap: break-word;
     line-height: 135%;
@@ -186,6 +188,10 @@ a:hover {
   font-size: 3vw;
   line-height: 120%;
   font-family: sans-serif; 
+  }
+
+  .title, .title-link {
+    font-size: 4vw;
   }
 
   .owl-carousel {
