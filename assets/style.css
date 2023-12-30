@@ -51,6 +51,16 @@ a:hover {
   transition: color 0.3s ease; 
 }
 
+.description a {
+  color:gray;
+  text-decoration:underline;
+}
+
+.description a:hover {
+  color:black;
+  transition: color 0.3s ease; 
+}
+
 .description {
   color: grey;
   font-family: sans-serif;
