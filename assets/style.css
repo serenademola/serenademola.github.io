@@ -9,8 +9,8 @@
 
 /* Stile generale del corpo del documento */
 body {
-  overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-x: scroll;
+  overflow-y: hidden;
   scrollbar-width: thin;
   scrollbar-color: transparent transparent;
   font: 1vw/120% sans-serif;
