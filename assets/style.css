@@ -9,7 +9,7 @@
 
 /* Stile generale del corpo del documento */
 body {
-  overflow-x: scroll;
+  overflow-x: hidden;
   overflow-y: hidden;
   scrollbar-width: thin;
   scrollbar-color: transparent transparent;
