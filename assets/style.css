@@ -4,25 +4,22 @@
 
 @font-face {
   font-family: sans-serif;
-  src: url("/assets/webfonts/SuisseIntl-Regular.otf") format("opentype");
+  src: url("/assets/webfonts/Amiamie-Regular.ttf") format("truetype");
 }
 
 /* Stile generale del corpo del documento */
 body {
   overflow-x: hidden;
-  overflow-y: hidden;
-  scrollbar-width: thin;
-  scrollbar-color: transparent transparent;
+  overflow-y: scroll;
   font: 1vw/120% sans-serif;
 }
 
-
-body::-webkit-scrollbar {
-  width: 12px; /* Imposta la larghezza della barra di scorrimento */
+::-webkit-scrollbar {
+  width: 15px;
 }
 
-body::-webkit-scrollbar-thumb {
-  background-color: transparent; /* Imposta il colore del "pulsante" della barra di scorrimento */
+::-webkit-scrollbar-track {
+  display: none;
 }
 
 header {
