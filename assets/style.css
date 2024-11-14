@@ -43,9 +43,9 @@ header {
 .bio {
   color: black;
   font-family: sans-serif;
-  font-size: 1.4vw;
+  font-size: 1vw;
   line-height: 120%;
-  max-width: 15ch;
+  max-width: 2ch;
 }
 
 a {
@@ -83,7 +83,7 @@ a:hover {
   text-align: left;
   word-wrap: break-word;
   line-height: 135%;
-  margin-left:55px;
+  max-width: 30ch;
 }
 
 ::selection {
@@ -132,9 +132,10 @@ a:hover {
 
 
 /* About page */
-.container {
+.container.single-column {
   display: flex;
   align-items: baseline;
+  max-width: 62ch;
 }
 
 .content {
@@ -142,12 +143,6 @@ a:hover {
   flex-basis: 20%;
   padding: 0px 0px 0px 10px;
 }
-
-.sidebar {
-  flex: 2;
-  padding: 0px 0px 0px 10px;
-}
-
 
 /* MEDIA QUERY */
 @media screen and (max-width: 600px),
@@ -174,27 +169,12 @@ screen and (min-width: 601px) and (max-width: 1024px) {
     max-width: 85ch;
   }
 
-  .container {
-    flex-direction: column;
+  .container.single-column {
+    max-width: 62ch; /* Larghezza fissa per schermi più grandi */
   }
 
-  .combined-text-about {
-    text-align: left;
-    word-wrap: break-word;
-    line-height: 135%;
-    margin-left: 0;
-  }
-
-  .bio {
-    color: black;
-    font-family: sans-serif;
-    font-size: 4vw;
-    line-height: 120%;
-  }
-
-  .combined-text {
-    padding-right: 10px;
-    max-width: 85ch;
+  .content {
+    padding: 0px 10px;
   }
 }
 
@@ -227,26 +207,11 @@ screen and (min-width: 601px) and (max-width: 1024px) {
     line-height: 112%;
   }
 
-  .container {
-    flex-direction: column;
+  .container.single-column {
+    max-width: 85ch; /* Mantieni una larghezza massima leggermente maggiore */
   }
 
-  .combined-text-about {
-    text-align: left;
-    word-wrap: break-word;
-    line-height: 135%;
-    margin-left: 0;
-  }
-  
-  .bio {
-    color: black;
-    font-family: sans-serif;
-    font-size: 3.4vw;
-    line-height: 120%;
-  }
-
-  .combined-text {
-    padding-right: 10px;
-    max-width: 85ch;
+  .content {
+    padding: 0px 10px;
   }
 }
