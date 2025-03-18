@@ -13,14 +13,14 @@ $(document).ready(function () {
     });
 
     // Abilita la funzionalità mousewheel utilizzando il plugin jquery.mousewheel.js
-   // $('.owl-carousel').on('mousewheel', '.owl-stage', function (e) {
-   //     if (e.originalEvent.deltaY > 0) {
-   //         owl.trigger('prev.owl.carousel');
-   //     } else {
-   //         owl.trigger('next.owl.carousel');
-   //     }
-   //     e.preventDefault();
-   // });
+    $('.owl-carousel').on('mousewheel', '.owl-stage', function (e) {
+        if (e.originalEvent.deltaY > 0) {
+            owl.trigger('prev.owl.carousel');
+        } else {
+            owl.trigger('next.owl.carousel');
+        }
+        e.preventDefault();
+    });
 
     // Gestisci il click del mouse sugli elementi .owl-item
     owl.on('click', '.owl-item .image', function (e) {
