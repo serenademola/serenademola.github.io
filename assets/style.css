@@ -146,13 +146,13 @@ a:hover {
 /* Media Query MOBILE */
 @media screen and (max-width: 600px) {
   body, .title, .title-link, .text {
-    font-size: 4rem; /* Uso di rem per migliorare la leggibilità */
+    font-size: 1.5rem; 
   }
 
   /* Layout in colonna per il carosello su mobile */
   .owl-carousel {
     width: 100%;
-    scroll-snap-type: none;
+    scroll-snap-type: y mandatory;
     margin: 0 auto;
     display: flex;
     flex-direction: column;  /* Cambia il layout del carosello in verticale */
