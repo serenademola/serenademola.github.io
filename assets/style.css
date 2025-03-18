@@ -149,10 +149,16 @@ a:hover {
     font-size: 1.5rem; 
   }
 
-  /* nascondo la descrizione */
+  /* nascondo la descrizione + bio */
   .description {
     display: none; 
   }
+
+  .container.single-column .content .title {
+    opacity: 0; 
+    pointer-events: none; /* Evita l'interazione con il testo */
+    transition: opacity 0.5s ease;
+}
 
   /* Layout in colonna */
   .owl-carousel {
