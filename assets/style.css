@@ -149,26 +149,22 @@ a:hover {
     font-size: 1.5rem; 
   }
 
-  /* nascondo la descrizione + bio */
+  /* nascondo la descrizione */
   .description {
     display: none; 
   }
 
-  .container.single-column .content .title {
-    opacity: 0; 
-    pointer-events: none; /* Evita l'interazione con il testo */
-    transition: opacity 0.5s ease;
-}
-
   /* Layout in colonna */
   .owl-carousel {
     width: 100%;
+    height: 100vh;
     scroll-snap-type: y mandatory;
     margin: 0 auto;
     display: flex;
     flex-direction: column; 
     align-items: center; 
     padding: 0;
+    overflow: hidden;
   }
 
   .owl-item {
@@ -178,6 +174,12 @@ a:hover {
 
   .owl-carousel .frame {
     max-width: 90vw; 
+    margin-bottom: 15px;
+  }
+
+  .owl-carousel .image {
+    width:100%;
+    height: auto;
   }
 
   /* Modifiche al layout del contenitore principale */
@@ -190,7 +192,6 @@ a:hover {
 
   .content {
     width: 100%;  /* Occupare tutta la larghezza disponibile */
-    padding: 10px 0;
   }
 
   .owl-carousel .frame .image {
@@ -199,7 +200,7 @@ a:hover {
   }
 
   .content {
-    padding: 10px;
+    padding: 5px;
   }
 
   .combined-text-about {
