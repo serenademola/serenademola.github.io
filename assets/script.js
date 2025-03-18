@@ -3,7 +3,7 @@ $(document).ready(function () {
         loop: true,
         margin: 20,
         autoWidth: true,
-        mouseDrag: true,
+        mouseDrag: false,
         nav: false,
         responsive: {
             0: { items: 1 },
@@ -23,6 +23,19 @@ $(document).ready(function () {
     //        owl.trigger('prev.owl.carousel');  // Scorri indietro
     //    }
 
+    // Disabilita il drag quando l'utente sta selezionando il testo
+    $(document).on('selectstart', function () {
+        isTextSelecting = true;
+        owl.trigger('destroy.owl.carousel');  // Disabilita temporaneamente il carosello
+    });
+
+    // Riabilita il drag una volta che la selezione del testo è terminata
+    $(document).on('mouseup', function () {
+        if (isTextSelecting) {
+            owl.owlCarousel();  // Riabilita il carosello dopo il rilascio della selezione
+            isTextSelecting = false;
+        }
+    });
 
     // Gestisci il click del mouse sugli elementi .owl-item
     owl.on('click', '.owl-item .image', function (e) {
