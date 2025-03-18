@@ -5,8 +5,8 @@ $(document).ready(function () {
         autoWidth: true,
         mouseDrag: false,
         nav: false,
-        smartSpeed:1000,
-        autoplaySpeed:1000,
+        smartSpeed:5000,
+        autoplaySpeed:5000,
         responsive: {
             0: { items: 1 },
             600: { items: 2 },

@@ -145,28 +145,33 @@ a:hover {
 
 /* Media Query MOBILE */
 @media screen and (max-width: 600px) {
-  body, .title, .title-link, .text {
+  body, .title, .title-link, .text, .bio, .description, .combined-text, .combined-text-about {
     font-size: 1.5rem; 
   }
 
-  /* Layout in colonna per il carosello su mobile */
+  /* nascondo la descrizione */
+  .description {
+    display: none; 
+  }
+
+  /* Layout in colonna */
   .owl-carousel {
     width: 100%;
     scroll-snap-type: y mandatory;
     margin: 0 auto;
     display: flex;
-    flex-direction: column;  /* Cambia il layout del carosello in verticale */
-    align-items: center; /* Allinea gli item al centro */
+    flex-direction: column; 
+    align-items: center; 
     padding: 0;
   }
 
   .owl-item {
     flex: 0 0 auto;
-    margin-bottom: 20px; /* Aggiungi margini tra gli item */
+    margin-bottom: 20px;
   }
 
   .owl-carousel .frame {
-    max-width: 90vw;  /* Riduci la larghezza massima delle immagini */
+    max-width: 90vw; 
   }
 
   /* Modifiche al layout del contenitore principale */
@@ -182,19 +187,11 @@ a:hover {
     padding: 10px 0;
   }
 
-  .bio, .description, .combined-text, .combined-text-about {
-    font-size: 3.5rem; /* Testo più grande su mobile */
-    line-height: 120%; 
-    max-width: 100%; /* Usa la larghezza completa */
-  }
-
-  /* Modificare l'allineamento delle immagini nel carosello per mobile */
   .owl-carousel .frame .image {
     width: 100%; 
     height: auto;
   }
 
-  /* Aggiungere margini tra i vari blocchi di contenuti */
   .content {
     padding: 10px;
   }
@@ -210,7 +207,7 @@ a:hover {
 
 @media screen and (min-width: 601px) and (max-width: 1024px) {
   body, .title, .title-link, .text {
-    font-size: 4vw;
+    font-size: 1.5vw;
   }
 
   body {
@@ -237,7 +234,7 @@ a:hover {
   }
 
   .container.single-column {
-    max-width: 85ch; /* Mantieni una larghezza massima leggermente maggiore */
+    max-width: 85ch; 
   }
 
   .content {
