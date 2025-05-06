@@ -1,16 +1,28 @@
-$(document).ready(function () {
-    var owl = $('.owl-carousel').owlCarousel({
-        loop: true,
-        margin: 20,
-        autoWidth: true,
-        mouseDrag: false,
-        nav: false,
-        responsive: {
-            0: { items: 1 },
-            600: { items: 2 },
-            1000: { items: 3 }
+var owl = $('.owl-carousel');
+owl.owlCarousel({
+    loop:true,
+    nav:true,
+    margin:10,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },            
+        960:{
+            items:3
+        },
+        1200:{
+            items:4
         }
-    });
-    
-
+    }
+});
+owl.on('mousewheel', '.owl-stage', function (e) {
+    if (e.deltaY>0) {
+        owl.trigger('next.owl');
+    } else {
+        owl.trigger('prev.owl');
+    }
+    e.preventDefault();
 });
