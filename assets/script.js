@@ -12,15 +12,5 @@ $(document).ready(function () {
         }
     });
     
-// Gestisci il click del mouse sugli elementi .owl-item
-owl.on('click', '.owl-item .image', function (e) {
-    var viewportWidth = $(window).width();
-    var clickX = e.clientX;
 
-    if (clickX < viewportWidth / 2) {
-        owl.trigger('prev.owl.carousel');
-    } else {
-        owl.trigger('next.owl.carousel');
-    }
-});
 });
