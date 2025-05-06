@@ -32,9 +32,8 @@ owl.on('click', '.owl-item .image', function (e) {
     var clickX = e.clientX;
 
     if (clickX < viewportWidth / 2) {
-        owl.trigger('prev.owl.carousel');
+        owl.trigger('prev.owl');
     } else {
-        owl.trigger('next.owl.carousel');
+        owl.trigger('next.owl');
     }
-    });
 });
