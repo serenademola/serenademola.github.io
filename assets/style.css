@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: sans-serif;
-  src: url("/assets/webfonts/Amiamie-Regular.ttf") format("truetype");
+  src: url("webfonts/Amiamie-Regular.ttf") format("truetype");
 }
 
 /* Stile generale del corpo del documento */
@@ -29,7 +29,8 @@ header {
   margin: 10px 10px 15px 10px;
 }
 
-.title, .title-link {
+.title,
+.title-link {
   font-size: 1vw;
   color: black;
   font-family: sans-serif;
@@ -49,23 +50,23 @@ header {
 }
 
 a {
-  color: black; 
-  text-decoration: none; 
+  color: black;
+  text-decoration: none;
 }
 
 a:hover {
-  color: gray; 
-  transition: color 0.3s ease; 
+  color: gray;
+  transition: color 0.3s ease;
 }
 
 .description a {
-  color:gray;
-  text-decoration:underline;
+  color: gray;
+  text-decoration: underline;
 }
 
 .description a:hover {
-  color:black;
-  transition: color 0.3s ease; 
+  color: black;
+  transition: color 0.3s ease;
 }
 
 .description {
@@ -74,7 +75,7 @@ a:hover {
 }
 
 .combined-text {
-  margin:0px;
+  margin: 0px;
   text-align: left;
   word-wrap: break-word;
 }
@@ -93,15 +94,15 @@ a:hover {
 
 .description::selection {
   background-color: grey;
-  color: white; 
+  color: white;
 }
 
 /* CAROSELLO */
 .owl-carousel {
-  width: 100%; 
-  position: relative; 
+  width: 100%;
+  position: relative;
   display: flex;
-  overflow-x: auto; 
+  overflow-x: auto;
   margin: 0px 0px 0px 10px;
   padding: 0;
   scroll-snap-type: x mandatory; /* Abilita il posizionamento dello scorrimento */
@@ -113,16 +114,16 @@ a:hover {
 }
 
 .owl-carousel .frame .image {
-  width: 100%; 
+  width: 100%;
   height: auto;
-  max-width: 100%; 
-  max-height: 100%; 
+  max-width: 100%;
+  max-height: 100%;
   object-fit: contain; /* Mantiene l'aspetto originale dell'immagine senza distorsione */
   padding-bottom: 10px;
 }
 
 .owl-carousel .frame {
-  max-width: 800px; 
+  max-width: 800px;
   margin: 0 auto; /* Centra l'elemento nel carosello */
 }
 
@@ -145,13 +146,32 @@ a:hover {
 
 /* Media Query MOBILE */
 @media screen and (max-width: 600px) {
-  body, .title, .title-link, .text, .bio, .description, .combined-text, .combined-text-about {
-    font-size: 1.5rem; 
+  body,
+  .title,
+  .title-link,
+  .text,
+  .bio,
+  .description,
+  .combined-text,
+  .combined-text-about {
+    font-size: 1.1rem;
+    line-height: 1.4;
+  }
+
+  /* Improve Header for touch */
+  header {
+    margin: 15px 15px 25px 15px;
+  }
+
+  .title a,
+  .title-link a {
+    display: inline-block;
+    padding: 10px 0; /* Increase touch target vertical */
   }
 
   /* nascondo la descrizione */
   .description {
-    display: none; 
+    display: none;
   }
 
   /* Layout in colonna */
@@ -159,67 +179,66 @@ a:hover {
     width: 100%;
     margin: 0 auto;
     display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    padding: 0;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px; /* Add horizontal padding to container */
   }
 
   .owl-item {
     flex: 0 0 auto;
-    margin-bottom: 20px;
+    width: 100%; /* Ensure full width relative to parent */
+    margin-bottom: 40px; /* Increase space between items */
   }
 
   .owl-carousel .frame {
-    max-width: 90vw; 
-    margin-bottom: 15px;
+    max-width: 100%;
+    margin-bottom: 10px;
   }
 
   .owl-carousel .image {
-    width:100%;
-    height: 150%;
+    width: 100%;
+    height: auto; /* Allow auto height */
+    object-fit: cover;
   }
 
   /* Modifiche al layout del contenitore principale */
   .container.single-column {
     display: flex;
-    align-items: center; /* Centra gli elementi */
-    max-width: 100%;  /* Usa la larghezza completa disponibile */
+    flex-direction: column; /* Ensure vertical stacking */
+    align-items: flex-start;
+    max-width: 100%;
+    padding: 0 15px;
   }
 
   .content {
-    width: 100%;  /* Occupare tutta la larghezza disponibile */
-  }
-
-  .owl-carousel .frame .image {
-    width: 100%; 
-    height: auto;
-  }
-
-  .content {
-    padding: 5px;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
   }
 
   .combined-text-about {
-    line-height: 120%;
-    max-width: 90%; 
+    line-height: 1.4;
+    max-width: 100%;
   }
 }
-
 
 /* MEDIA QUERY 2 */
 
 @media screen and (min-width: 601px) and (max-width: 1024px) {
-  body, .title, .title-link, .text {
+  body,
+  .title,
+  .title-link,
+  .text {
     font-size: 1.5vw;
   }
 
   body {
     line-height: 120%;
-    font-family: sans-serif; 
+    font-family: sans-serif;
   }
 
   .owl-carousel {
-    width: 100%; 
+    width: 100%;
     scroll-snap-type: none;
     margin: 0 auto;
   }
@@ -229,15 +248,15 @@ a:hover {
   }
 
   .owl-carousel .frame {
-    max-width: 100vw; 
+    max-width: 100vw;
   }
-  
+
   .text {
     line-height: 112%;
   }
 
   .container.single-column {
-    max-width: 85ch; 
+    max-width: 85ch;
   }
 
   .content {
