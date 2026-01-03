@@ -146,68 +146,98 @@ a:hover {
 
 /* Media Query MOBILE */
 @media screen and (max-width: 600px) {
-  body,
-  .title,
-  .title-link,
-  .text,
-  .bio,
-  .description,
-  .combined-text,
-  .combined-text-about {
-    font-size: 1.1rem;
+  body {
+    margin: 0; /* Ensure no body margin */
+    overflow: hidden; /* Prevent scrolling if we want a pure slider experience, or keep scroll if needed. Let's start with standard */
+  }
+
+  /* Overlay Header */
+  header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    margin: 15px; /* Keep margin but ensuring it sits on top */
+    background: transparent;
+    pointer-events: none; /* Let clicks pass through if needed, but links need pointer-events auto */
+  }
+
+  .title a, .title-link a {
+    pointer-events: auto; /* Re-enable clicks on links */
+    /* Add a subtle shadow or background to ensure readability over images? User asked for transparency, maybe simple is best first */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Optional: help readability */
+  }
+
+  /* Typography matches user preference for readable but not huge */
+  body, .title, .title-link {
+    font-size: 1.1rem; 
     line-height: 1.4;
   }
 
-  /* Improve Header for touch */
-  header {
-    margin: 15px 15px 25px 15px;
+  /* Hide Texts */
+  .text, .bio, .description, .combined-text, .combined-text-about {
+    display: none; 
   }
 
-  .title a,
-  .title-link a {
-    display: inline-block;
-    padding: 10px 0; /* Increase touch target vertical */
-  }
-
-  /* nascondo la descrizione */
-  .description {
-    display: none;
-  }
-
-  /* Layout in colonna */
+  /* Full Screen Carousel */
   .owl-carousel {
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 15px; /* Add horizontal padding to container */
+    position: fixed; /* Fix to background or fill screen */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: block; /* Owl carousel default is usually block with float/flex internal */
   }
 
+  /* Force Owl items to be full screen */
   .owl-item {
-    flex: 0 0 auto;
-    width: 100%; /* Ensure full width relative to parent */
-    margin-bottom: 40px; /* Increase space between items */
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
   }
 
   .owl-carousel .frame {
-    max-width: 100%;
-    margin-bottom: 10px;
-  }
-
-  .owl-carousel .image {
     width: 100%;
-    height: auto; /* Allow auto height */
-    object-fit: cover;
+    height: 100%;
+    margin: 0;
+    max-width: none;
   }
 
-  /* Modifiche al layout del contenitore principale */
+  .owl-carousel .frame .image, .owl-carousel .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Fill the screen */
+    padding: 0;
+  }
+
+  /* About page fix for mobile - might need to be visible independently? 
+     If about is linked, it might be a separate page. 
+     The user mentioned "About page" in transparency. 
+  */
   .container.single-column {
+    padding-top: 60px; /* Space for the header */
+    padding-left: 15px;
+    padding-right: 15px;
     display: flex;
     flex-direction: column; /* Ensure vertical stacking */
     align-items: flex-start;
     max-width: 100%;
-    padding: 0 15px;
+  }
+  
+  /* Show text only on about page perhaps? User said "Hide paragraphs that are visible on desktop" 
+     usually referring to the project descriptions. 
+     About page text likely needs to remain. The selector .text inside .frame is what we hid.
+     .combined-text-about is likely for about page.
+  */
+  .combined-text-about {
+    display: block; /* Re-enable for about page if it was hidden by generic rule */
+    font-size: 1.1rem;
+    line-height: 1.4;
+    max-width: 100%;
   }
 
   .content {
@@ -215,48 +245,57 @@ a:hover {
     padding: 0;
     margin-bottom: 20px;
   }
-
-  .combined-text-about {
-    line-height: 1.4;
-    max-width: 100%;
-  }
 }
 
-/* MEDIA QUERY 2 */
-
+/* MEDIA QUERY TABLET & SMALL DESKTOP */
 @media screen and (min-width: 601px) and (max-width: 1024px) {
-  body,
-  .title,
-  .title-link,
-  .text {
-    font-size: 1.5vw;
+  body, .title, .title-link, .text {
+    font-size: 1.2vw; /* Adjusted for tablet */
   }
 
   body {
     line-height: 120%;
-    font-family: sans-serif;
+    font-family: sans-serif; 
   }
 
+  /* Restore Desktop-like Carousel */
   .owl-carousel {
     width: 100%;
-    scroll-snap-type: none;
-    margin: 0 auto;
+    margin: 0px 0px 0px 10px; /* Match desktop margin */
+    display: flex; /* Or whatever desktop uses, line 103 says display: flex */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; 
   }
 
+  /* Revert mobile/previous tablet overrides */
   .owl-item {
-    flex: 1 0 100%;
+    flex: 0 0 auto; /* Allow natural width */
+    width: auto;
+    scroll-snap-align: start;
+    margin-bottom: 0;
   }
 
   .owl-carousel .frame {
-    max-width: 100vw;
+    max-width: 800px; /* Restore max width limit */
+    margin: 0 auto; /* Centra l'elemento nel carosello */
+  }
+  
+  .owl-carousel .frame .image {
+     width: auto;
+     max-width: 100%;
+     max-height: 100%;
+     object-fit: contain; /* Don't cover/crop */
+     padding-bottom: 10px;
   }
 
   .text {
     line-height: 112%;
+    max-width: 65ch; /* Ensure text width constraint */
   }
 
   .container.single-column {
-    max-width: 85ch;
+    max-width: 85ch; 
+    padding: 0px 10px;
   }
 
   .content {
