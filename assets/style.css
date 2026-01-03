@@ -158,7 +158,8 @@ a:hover {
     left: 0;
     width: 100%;
     z-index: 10;
-    margin: 15px; /* Keep margin but ensuring it sits on top */
+    margin: 0;
+    padding: 15px;
     background: transparent;
     pointer-events: none; /* Let clicks pass through if needed, but links need pointer-events auto */
   }
@@ -250,7 +251,7 @@ a:hover {
 /* MEDIA QUERY TABLET & SMALL DESKTOP */
 @media screen and (min-width: 601px) and (max-width: 1024px) {
   body, .title, .title-link, .text {
-    font-size: 1.2vw; /* Adjusted for tablet */
+    font-size: 2vw; /* Adjusted to be proportional to desktop default */
   }
 
   body {
